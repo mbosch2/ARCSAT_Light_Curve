@@ -12,6 +12,14 @@ from photutils.aperture import ApertureStats
 from photutils.profiles import RadialProfile
 from photutils.centroids import centroid_1dg
 
+"""
+After creating the bias, dark, and flat median files, this file must be used to loop
+over all of the raw data in order to reduce it. 
+For example:
+for i in science_list:
+    reduce_science_frame(i, 'median_bias_2', 'median_flat_2', 'median_dark_2', output_dir='Processed_2', reduced_science_filename= i)
+"""
+
 def reduce_science_frame(
     science_filename,
     median_bias_filename,
