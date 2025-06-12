@@ -13,15 +13,15 @@ from photutils.profiles import RadialProfile
 from photutils.centroids import centroid_1dg
 
 def create_median_bias(bias_list, median_bias_filename):
-    """This function must:
+    """This function:
 
-    - Accept a list of bias file paths as bias_list.
-    - Read each bias file and create a list of 2D numpy arrays.
-    - Use a sigma clipping algorithm to combine all the bias frames using
+    - Accepts a list of bias file paths as bias_list.
+    - Reads each bias file and creates a list of 2D numpy arrays.
+    - Uses a sigma clipping algorithm to combine all the bias frames using
       the median and removing outliers outside 3-sigma for each pixel.
-    - Save the resulting median bias frame to a FITS file with the name
+    - Saves the resulting median bias frame to a FITS file with the name
       median_bias_filename.
-    - Return the median bias frame as a 2D numpy array.
+    - Returns the median bias frame as a 2D numpy array.
 
     """
     #Reading in the data and adding it into an empty list
