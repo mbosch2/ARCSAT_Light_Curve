@@ -14,6 +14,9 @@ from photutils.centroids import centroid_1dg
 
 """
 Once you have the reduced science images, you must loop all of them through this function to make the light curve
+For example:
+for i in science_list:
+    do_aperture_photometry(i)
 """
 
 
